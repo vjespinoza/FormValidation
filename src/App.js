@@ -1,5 +1,5 @@
 import Form from "./components/Form/Form";
-import GlobalStyles from "./globalStyles";
+import GlobalStyles, { AppStyle } from "./globalStyles";
 import { ThemeProvider } from "styled-components";
 import { theme } from "./theme";
 
@@ -8,9 +8,9 @@ function App() {
         <>
             <ThemeProvider theme={theme}>
                 <GlobalStyles />
-                <div>
+                <AppStyle>
                     <Form />
-                </div>
+                </AppStyle>
             </ThemeProvider>
         </>
     );
