@@ -34,6 +34,7 @@ export const FormRight = styled.section`
     width: 100%;
     padding: 2rem;
     background-color: ${(props) => props.theme.colors.bgDark};
+    position: relative;
 `;
 
 export const FormImage = styled.img`
@@ -48,8 +49,9 @@ export const FormSingup = styled.form`
 `;
 
 export const FormTitle = styled.h2`
-    font-size: 1.6rem;
-    color: white;
+    font-size: ${({ big }) => (big ? "2.5rem" : "1.6rem")};
+    color: ${(props) =>
+        props.defaultCol ? props.theme.colors.bgDark : "#fff"};
     margin-bottom: 1.5rem;
 `;
 
@@ -88,7 +90,7 @@ export const FormError = styled.span`
     position: absolute;
     bottom: 10%;
     left: 0;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
 `;
 
 export const FormButton = styled.button`
@@ -118,4 +120,20 @@ export const FormFooter = styled.footer`
     & a {
         color: ${(props) => props.theme.colors.primary};
     }
+`;
+
+export const FormSuccess = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background-color: ${(props) => props.theme.colors.bgLigth};
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 4rem;
+    transform: translateY(100%);
 `;

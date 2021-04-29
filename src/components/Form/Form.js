@@ -12,7 +12,7 @@ const Form = () => {
             </FormLeft>
             <FormRight>
                 <Signup />
-                {/* <Success /> */}
+                <Success />
             </FormRight>
         </FormWrapper>
     );
