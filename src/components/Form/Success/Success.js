@@ -1,13 +1,10 @@
 import React from "react";
 import { FormImage, FormSuccess, FormTitle } from "../Form.elements";
 import svgSuccess from "../../../assets/svg/FormSuccess.svg";
-import useForm from "../../../hooks/useForm";
 
-const Success = () => {
-    const { submitted } = useForm();
-
+const Success = ({ submitted }) => {
     return (
-        <FormSuccess submitted={false}>
+        <FormSuccess submitted={submitted}>
             <FormTitle defaultCol big>
                 Your account has been created!
             </FormTitle>

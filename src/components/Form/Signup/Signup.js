@@ -12,18 +12,18 @@ import {
 import useForm from "../../../hooks/useForm";
 import validation from "../validateForm";
 
-const Signup = () => {
-    const [submitted, setSubmitted] = useState(false);
-
-    const formSubmit = () => {
-        setSubmitted(true);
-    };
+const Signup = ({ setSubmitted }) => {
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
     const { handleChange, handleSubmit, values, errors } = useForm(
         validation,
-        formSubmit,
-        submitted
+        setSubmitted,
+        isSubmitting
     );
+
+    const formSubmit = () => {
+        setIsSubmitting(true);
+    };
 
     return (
         <>
