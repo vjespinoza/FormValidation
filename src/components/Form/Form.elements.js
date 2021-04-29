@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
-const focusEffect =
-    "box-shadow: 0 0 0 3px ${(props) => props.theme.colors.primary}";
+const focusEffect = `box-shadow: 0 0 0 3px ${(props) =>
+    props.theme.colors.primary}`;
 
 export const FormWrapper = styled.main`
     display: flex;
@@ -117,8 +117,12 @@ export const FormFooter = styled.footer`
     text-align: center;
     font-size: 0.8rem;
 
-    & a {
+    & button {
         color: ${(props) => props.theme.colors.primary};
+        background-color: transparent;
+        outline: none;
+        border: none;
+        cursor: pointer;
     }
 `;
 
@@ -135,5 +139,8 @@ export const FormSuccess = styled.div`
     bottom: 0;
     left: 0;
     padding: 4rem;
-    transform: translateY(100%);
+    transition: all 200ms ease-in-out;
+    /* transform: translateY(100%); */
+    transform: ${(props) =>
+        props.submitted ? "translateY(0)" : "translateY(100%)"};
 `;

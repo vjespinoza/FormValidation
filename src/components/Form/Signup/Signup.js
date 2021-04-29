@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
     FormButton,
     FormError,
@@ -13,7 +13,17 @@ import useForm from "../../../hooks/useForm";
 import validation from "../validateForm";
 
 const Signup = () => {
-    const { handleChange, handleSubmit, values, errors } = useForm(validation);
+    const [submitted, setSubmitted] = useState(false);
+
+    const formSubmit = () => {
+        setSubmitted(true);
+    };
+
+    const { handleChange, handleSubmit, values, errors } = useForm(
+        validation,
+        formSubmit,
+        submitted
+    );
 
     return (
         <>
@@ -69,9 +79,10 @@ const Signup = () => {
                     />
                     <FormError>{errors.password2}</FormError>
                 </FormItem>
-                <FormButton>Submit</FormButton>
+                <FormButton onClick={formSubmit}>Submit</FormButton>
                 <FormFooter>
-                    Already have an account? Login <a href="#">here</a>.
+                    Already have an account? Login{" "}
+                    <button type="button">here</button>.
                 </FormFooter>
             </FormSingup>
         </>
