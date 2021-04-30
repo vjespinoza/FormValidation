@@ -25,9 +25,15 @@ a {
 `;
 
 export const AppStyle = styled.div`
-    display: block;
+    display: flex;
     height: 100vh;
+    justify-content: center;
+    align-items: center;
     background-color: ${(props) => props.theme.colors.bgLigth};
+
+    @media (max-width: 768px) and (orientation: landscape) {
+        height: fit-content;
+    }
 `;
 
 export default GlobalStyles;

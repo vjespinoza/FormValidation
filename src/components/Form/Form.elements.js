@@ -6,15 +6,22 @@ const focusEffect = `box-shadow: 0 0 0 3px ${(props) =>
 export const FormWrapper = styled.main`
     display: flex;
     justify-content: space-between;
-    width: 60rem;
+    width: 60vw;
     height: fit-content;
-    position: relative; //Position for itself (FormWrapper)
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     border-radius: 0.8rem;
     overflow: hidden;
     box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.4);
+
+    @media (max-width: 768px) {
+        width: 90vw;
+        flex-direction: column;
+    }
+
+    @media (max-width: 768px) and (orientation: landscape) {
+        align-self: flex-start;
+        margin-top: 1.5rem;
+        margin-bottom: 2rem;
+    }
 `;
 
 export const FormLeft = styled.section`
@@ -25,6 +32,10 @@ export const FormLeft = styled.section`
     padding: 2rem;
     background-color: ${(props) => props.theme.colors.bgCol};
     background-image: ${(props) => props.theme.colors.gradient};
+
+    @media (max-width: 768px) {
+        display: none;
+    }
 `;
 
 export const FormRight = styled.section`
@@ -35,6 +46,10 @@ export const FormRight = styled.section`
     padding: 2rem;
     background-color: ${(props) => props.theme.colors.bgDark};
     position: relative;
+
+    @media (max-width: 425px) {
+        padding: 1rem;
+    }
 `;
 
 export const FormImage = styled.img`
@@ -46,6 +61,10 @@ export const FormSingup = styled.form`
     flex-direction: column;
     padding: 1rem 1.5rem;
     width: 100%;
+
+    @media (max-width: 425px) {
+        padding: 0;
+    }
 `;
 
 export const FormTitle = styled.h2`
@@ -53,6 +72,10 @@ export const FormTitle = styled.h2`
     color: ${(props) =>
         props.defaultCol ? props.theme.colors.bgDark : "#fff"};
     margin-bottom: 1.5rem;
+
+    @media (max-width: 425px) {
+        font-size: 1.1rem;
+    }
 `;
 
 export const FormItem = styled.div`
@@ -83,6 +106,10 @@ export const FormInput = styled.input`
         ${focusEffect}
         box-shadow: 0 0 0 3px ${(props) => props.theme.colors.primary};
     }
+
+    @media (max-width: 425px) {
+        margin-bottom: 1.1rem;
+    }
 `;
 
 export const FormError = styled.span`
@@ -91,6 +118,11 @@ export const FormError = styled.span`
     bottom: 10%;
     left: 0;
     font-size: 0.9rem;
+
+    @media (max-width: 425px) {
+        bottom: 1%;
+        font-size: 0.8rem;
+    }
 `;
 
 export const FormButton = styled.button`
