@@ -12,12 +12,12 @@ export const FormWrapper = styled.main`
     overflow: hidden;
     box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.4);
 
-    @media (max-width: 768px) {
+    @media (max-width: 812px) {
         width: 90vw;
         flex-direction: column;
     }
 
-    @media (max-width: 768px) and (orientation: landscape) {
+    @media (max-width: 812px) and (orientation: landscape) {
         align-self: flex-start;
         margin-top: 1.5rem;
         margin-bottom: 2rem;
@@ -33,7 +33,7 @@ export const FormLeft = styled.section`
     background-color: ${(props) => props.theme.colors.bgCol};
     background-image: ${(props) => props.theme.colors.gradient};
 
-    @media (max-width: 768px) {
+    @media (max-width: 812px) {
         display: none;
     }
 `;
