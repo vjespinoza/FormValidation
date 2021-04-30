@@ -31,7 +31,7 @@ export const AppStyle = styled.div`
     align-items: center;
     background-color: ${(props) => props.theme.colors.bgLigth};
 
-    @media (max-width: 812px) and (orientation: landscape) {
+    @media (max-width: 1050px) and (orientation: landscape) {
         height: fit-content;
     }
 `;
