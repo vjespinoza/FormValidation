@@ -32,7 +32,7 @@ export const AppStyle = styled.div`
     background-color: red;
     /* background-color: ${(props) => props.theme.colors.bgLigth}; */
 
-    @media (max-width: 812px) and (orientation: landscape) {
+    @media (max-width: 1250px) and (orientation: landscape) {
         height: fit-content;
     }
 `;
