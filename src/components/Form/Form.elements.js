@@ -17,7 +17,7 @@ export const FormWrapper = styled.main`
         flex-direction: column;
     }
 
-    @media (max-width: 1050px) and (orientation: landscape) {
+    @media (max-width: 812px) and (orientation: landscape) {
         align-self: flex-start;
         margin-top: 1.5rem;
         margin-bottom: 2rem;
