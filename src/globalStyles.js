@@ -29,7 +29,8 @@ export const AppStyle = styled.div`
     height: 100vh;
     justify-content: center;
     align-items: center;
-    background-color: ${(props) => props.theme.colors.bgLigth};
+    background-color: red;
+    /* background-color: ${(props) => props.theme.colors.bgLigth}; */
 
     @media (max-width: 812px) and (orientation: landscape) {
         height: fit-content;
