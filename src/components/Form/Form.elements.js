@@ -17,7 +17,7 @@ export const FormWrapper = styled.main`
         flex-direction: column;
     }
 
-    @media (max-width: 812px) and (orientation: landscape) {
+    @media (max-width: 1050px) and (orientation: landscape) {
         align-self: flex-start;
         margin-top: 1.5rem;
         margin-bottom: 2rem;
@@ -33,7 +33,11 @@ export const FormLeft = styled.section`
     background-color: ${(props) => props.theme.colors.bgCol};
     background-image: ${(props) => props.theme.colors.gradient};
 
-    @media (max-width: 812px) {
+    @media (max-width: 1050px) {
+        display: none;
+    }
+
+    @media (max-width: 1250px) and (orientation: landscape) {
         display: none;
     }
 `;
